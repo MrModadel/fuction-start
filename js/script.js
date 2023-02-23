@@ -54,7 +54,7 @@ for (let i = 2; i <= numU; i++) {
 console.log(arrF);
 let arrFt = [0, 1];
 for (let i = 2; i <= numU; i++) {
-   if (arrFt[arrFt.length - 1] <= numU) {
+   if (arrFt[arrFt.length - 1] < numU) {
       arrFt[i] = arrFt[i - 2] + arrFt[i - 1];
    }
 }
