@@ -17,7 +17,7 @@ function minUser(a, b) {
          console.log(totalTwo);
       }
    } else {
-      if (!a.isArray && !b.isArray&&typeof a !== "number"&&typeof b !== "number") {
+      if (!a.isArray && !b.isArray && typeof a !== "number" && typeof b !== "number") {
          let array = [];
          let keysA = Object.keys(a);
          let keysB = Object.keys(b);
@@ -27,22 +27,35 @@ function minUser(a, b) {
          }
          let totalTre = array.reduce((a, b) => a > b ? a : b)
          console.log(totalTre);
-         
-      } else if (a.isArray && b.isArray){
+
+      } else if (a.isArray && b.isArray) {
          let array = [];
          array.concat(a);
          array.concat(b);
          let totalFou = array.reduce((a, b) => a > b ? a : b);
          console.log(totalFou);
       } else {
-         let array = [a,b];
+         let array = [a, b];
          let totalFae = array.reduce((a, b) => a > b ? a : b);
          console.log(totalFae);
       }
    }
 }
-minUser(1,2)
+minUser(1, 2)
 // min(1, 2)
 // min([1, 2])
 // min({a: 1, b: 2})
 // min({a: 1, b: 2}, {a: 11, b: 12})    
+let arrF = [0, 1];
+let numU = +prompt('введите цифру');
+for (let i = 2; i <= numU; i++) {
+   arrF[i] = arrF[i - 2] + arrF[i - 1];
+}
+console.log(arrF);
+let arrFt = [0, 1];
+for (let i = 2; i <= numU; i++) {
+   if (arrFt[arrFt.length - 1] <= numU) {
+      arrFt[i] = arrFt[i - 2] + arrFt[i - 1];
+   }
+}
+console.log(arrFt);
