@@ -23,6 +23,8 @@ function minUser(a, b) {
          let keysB = Object.keys(b);
          for (let i = 0; i <= keysA.length - 1; i++) {
             array.push(a[keysA[i]]);
+         }
+         for (let i = 0; i <= keysB.length - 1; i++) {
             array.push(b[keysB[i]]);
          }
          let totalTre = array.reduce((a, b) => a > b ? a : b)
