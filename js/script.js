@@ -61,3 +61,13 @@ for (let i = 2; i <= numU; i++) {
    }
 }
 console.log(arrFt);
+let arrFr = [0, 1];
+for (let i = 2; i <= numU; i++) {
+   if (arrFr[arrFr.length - 1] < numU) {
+      arrFr[i] = arrFr[i - 2] + arrFr[i - 1];
+   }
+}
+if (arrFr[arrFr.length - 1] > numU){
+   arrFr.splice(-1,1, );
+}
+console.log(arrFr);
